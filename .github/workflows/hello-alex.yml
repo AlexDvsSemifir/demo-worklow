@@ -1,0 +1,20 @@
+name: Hello Alex
+# Event trigger qui implique de déclencher le worklow à la main
+on: workflow_dispatch
+
+env:
+  NAME: Alex
+
+jobs:
+  say_hello_stranger:
+    runs-on: ubuntu-latest
+    if: ${{ env.NAME != "Alex" }}
+    steps:
+      - name: "Dit bonjour"
+        run: echo "Salut toi ! Tu n'es pas Alex ?! oO"
+  say_hello_alex:
+    runs-on: ubuntu-latest
+    if: ${{ env.NAME == "Alex" }}
+    steps:
+      - name: "Coucou Alex"
+        run: echo "Salut $NAME ! Tu as l'air en pleine forme !"
