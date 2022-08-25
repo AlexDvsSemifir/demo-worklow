@@ -1,13 +1,17 @@
 name: Push or Pull ?
 on: [push, pull_request]
 
+env:
+  PUSH: C'est un push !
+  PULL_REQUEST: C'est une pull request !
+
 jobs:
   push:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Push
-        run: echo "C'est un push !"
+        run: echo "$PUSH"
 
   pull_request:
     runs-on: ubuntu-latest
@@ -15,4 +19,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Pull Request
-        run: echo "C'est une pull request !"
+        run: echo "$PULL_REQUEST"
