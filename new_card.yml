@@ -1,0 +1,12 @@
+name: Nouvelle carte
+
+on:
+  project_card:
+    types: [started, completed]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Validation"
+        run: echo "Carte créée"
