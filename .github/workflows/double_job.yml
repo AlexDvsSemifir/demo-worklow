@@ -1,4 +1,4 @@
-name: "Workflow suivant"
+name: "Workflow needs"
 
 on: workflow_dispatch
 
