@@ -5,6 +5,7 @@ on: workflow_dispatch
 jobs:
   fruitz:
     strategy:
+      fail-fast: true
       matrix:
         fruits: [Pomme, Poire, Pêche, Cerise]
         personnes: [Alex, Killian, Antoine, Adrien]
@@ -15,5 +16,4 @@ jobs:
         env:
           FRUIT: ${{matrix.fruits}}
           NOM: ${{matrix.personnes}}
-        run : echo "$NOM mange une $FRUIT, et il adore ça !"
-    
+        run : echo "${{matrix.personnes}} mange une ${{matrix.fruits}}, et il adore ça !"
