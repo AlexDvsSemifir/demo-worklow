@@ -1,0 +1,19 @@
+name: fruits
+
+on: workflow_dispatch
+
+jobs:
+  fruitz:
+    strategy:
+      matrix:
+        fruits: [Pomme, Poire, Pêche, Cerise]
+        personnes: [Alex, Killian, Antoine, Adrien]
+    name: Fruitz
+    runs-on: ubuntu-latest
+    steps:
+      - name: Goutez
+        env:
+          FRUIT: ${{matrix.fruits}}
+          NOM: ${{matrix.personnes}}
+        run : echo "$NOM mange une $FRUIT, et il adore ça !
+    
