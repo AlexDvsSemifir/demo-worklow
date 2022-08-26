@@ -16,6 +16,7 @@ jobs:
           path: artifact.txt
 
   download:
+    needs: upload
     name: download
     runs-on: ubuntu-latest
     steps:
