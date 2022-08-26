@@ -14,4 +14,8 @@ jobs:
         run: echo "Salut toi ! Tu n'es pas Alex ?! oO"
       - name: "Coucou Alex"
         if: ${{ env.NAME == 'Alex' }}
+<<<<<<< HEAD
         run: echo "Salut $NAME ! Tu as l'air en pleine forme !"
+=======
+        run: echo "Salut $NAME ! Tu as l'air en pleine forme !"
+>>>>>>> 75b0f58c3b89f19190046daed286018aeca0335b
