@@ -15,5 +15,5 @@ jobs:
         env:
           FRUIT: ${{matrix.fruits}}
           NOM: ${{matrix.personnes}}
-        run : echo "$NOM mange une $FRUIT, et il adore ça !
+        run : echo "$NOM mange une $FRUIT, et il adore ça !"
     
