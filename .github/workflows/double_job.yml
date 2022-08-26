@@ -1,0 +1,16 @@
+name: "Workflow suivant"
+
+on: workflow_dispatch
+
+jobs:
+  job_first:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Validation"
+        run: echo "Workflow exécuté"
+  job_second:
+    needs: [job_first]
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Validation"
+        run: echo "Workflow exécuté"
