@@ -1,7 +1,7 @@
-name: Nouvelle issue
+name: Nouvelle carte
 
 on:
-  issue:
+  project_card:
     types: [created]
 
 jobs:
@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Validation"
-        run: echo "Issue créée"
+        run: echo "Carte créée"
